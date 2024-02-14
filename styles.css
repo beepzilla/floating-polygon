@@ -1,0 +1,80 @@
+html, body {
+  height: 100%;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  perspective: 32em;
+  background: dimgrey;
+  color: white;
+}
+
+.polyhedron, .polyhedron *, .polyhedron *:before {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+}
+
+.polyhedron {
+  animation: ani 39s linear infinite;
+}
+
+@keyframes ani {
+  to {
+    transform: rotate(360deg) rotateX(-720deg) rotateY(1080deg);
+  }
+}
+.polyhedron__comp--shallow-pyramid {
+  transform: translateY(-4.08248em) rotateY(180deg);
+}
+.polyhedron__comp--shallow-pyramid:nth-child(1) {
+  transform: rotateY(0deg) rotateX(-70.52878deg) translateY(4.08248em) rotateX(180deg);
+}
+.polyhedron__comp--shallow-pyramid:nth-child(2) {
+  transform: rotateY(120deg) rotateX(-70.52878deg) translateY(4.08248em) rotateX(180deg);
+}
+.polyhedron__comp--shallow-pyramid:nth-child(3) {
+  transform: rotateY(240deg) rotateX(-70.52878deg) translateY(4.08248em) rotateX(180deg);
+}
+
+.polyhedron__face--triangle--isosceles {
+  overflow: hidden;
+  border-top: solid .125em;
+  border-right: solid .125em;
+  margin: -6em;
+  width: 12em;
+  height: 12em;
+  transform: rotate(-33.55731deg) skewX(22.88538deg) scaleY(0.92128);
+}
+.polyhedron__face--triangle--isosceles:nth-child(1) {
+  transform: rotateY(0deg) translateZ(5.7735em) rotateX(60.50379deg) rotate(-33.55731deg) skewX(22.88538deg) scaleY(0.92128);
+}
+.polyhedron__face--triangle--isosceles:nth-child(1):before {
+  background: linear-gradient(90deg, rgba(255, 0, 0, 0.32), rgba(0, 255, 0, 0.32));
+}
+.polyhedron__face--triangle--isosceles:nth-child(2) {
+  transform: rotateY(120deg) translateZ(5.7735em) rotateX(60.50379deg) rotate(-33.55731deg) skewX(22.88538deg) scaleY(0.92128);
+}
+.polyhedron__face--triangle--isosceles:nth-child(2):before {
+  background: linear-gradient(90deg, rgba(0, 255, 0, 0.32), rgba(0, 0, 255, 0.32));
+}
+.polyhedron__face--triangle--isosceles:nth-child(3) {
+  transform: rotateY(240deg) translateZ(5.7735em) rotateX(60.50379deg) rotate(-33.55731deg) skewX(22.88538deg) scaleY(0.92128);
+}
+.polyhedron__face--triangle--isosceles:nth-child(3):before {
+  background: linear-gradient(90deg, rgba(0, 0, 255, 0.32), rgba(255, 0, 0, 0.32));
+}
+.polyhedron__face--triangle--isosceles:before {
+  border-bottom: solid .125em;
+  margin: -3.31662em -10em;
+  width: 20em;
+  height: 6.63325em;
+  transform: scaleY(1.08544) skewX(-22.88538deg) rotate(33.55731deg) translateY(-50%);
+  content: '';
+}
